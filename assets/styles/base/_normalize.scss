@@ -1,0 +1,94 @@
+@use '../abstracts' as *;
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $color-text-base;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  background-color: $color-bg-base;
+  width: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+article,
+aside,
+details,
+figure,
+footer,
+header,
+nav,
+picture,
+section,
+summary {
+  display: block;
+}
+
+video,
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+fieldset,
+img {
+    border: none;
+}
+
+html,
+figure,
+blockquote {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+a {
+  color: currentColor;
+}
+
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+}
+
+button,
+[role="button"] {
+  cursor: pointer;
+}

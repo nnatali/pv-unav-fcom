@@ -1,0 +1,8 @@
+@use '../abstracts' as *;
+
+.header {
+  
+  &__title {
+    @include sr-only;
+  }
+}

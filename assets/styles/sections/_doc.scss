@@ -1,0 +1,17 @@
+@use '../abstracts' as *;
+
+.doc {
+
+  .u-container {
+    padding-top: 72px;
+    padding-bottom: 72px;
+
+    @include query-min(lg) {
+    
+    }
+
+    @include query-min(xl) {
+    
+    }
+  }
+}

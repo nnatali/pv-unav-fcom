@@ -1,0 +1,17 @@
+@use '../abstracts' as *;
+
+.hero {
+  
+  &__video {
+    
+    video {
+      width: 100%;
+
+      @include query-max(md) {
+        min-height: 100vh;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+}

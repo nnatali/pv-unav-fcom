@@ -1,0 +1,21 @@
+@use '../abstracts' as *;
+
+.u-container {
+  @include container();
+
+  &--sm {
+    max-width: $max-width-sm;
+  }
+
+  &--md {
+    max-width: $max-width-md;
+  }
+
+  &--lg {
+    max-width: $max-width-lg;
+  }
+
+  &--xl {
+    max-width: $max-width-xl;
+  }
+}

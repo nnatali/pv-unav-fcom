@@ -1,0 +1,21 @@
+@use 'sass:map';
+@use 'breakpoints' as *;
+
+// Colors
+$color-text-base: #000;
+$color-text-base-contrast: #fff;
+$color-bg-base: #fff;
+$color-bg-base-contrast: #000;
+$color-accent: #E4032E;
+$color-outline-focus: #005fcc;
+
+// Typography
+$font-family-base: 'AA';
+$font-size-base: 1rem;
+$line-height-base: 1.5;
+
+// Layout
+$max-width-sm: map.get($breakpoints, sm);
+$max-width-md: map.get($breakpoints, md);
+$max-width-lg: map.get($breakpoints, lg);
+$max-width-xl: map.get($breakpoints, xl);

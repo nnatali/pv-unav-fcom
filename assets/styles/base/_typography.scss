@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'AA';
+  src: url('../fonts/AA-Light.woff2') format('woff2'),
+       url('../fonts/AA-Light.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AA';
+  src: url('../fonts/AA.woff2') format('woff2'),
+       url('../fonts/AA.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AA';
+  src: url('../fonts/AA.woff2') format('woff2'),
+       url('../fonts/AA.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}

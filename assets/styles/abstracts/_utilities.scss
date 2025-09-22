@@ -1,0 +1,15 @@
+@use 'breakpoints' as *;
+
+.hide--mobile {
+  display: none;
+
+  @include query-min(sm) {
+    display: initial !important;
+  }
+}
+
+.hide--desktop {
+  @include query-min(sm) {
+    display: none !important;
+  }
+}

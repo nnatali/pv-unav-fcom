@@ -1,0 +1,84 @@
+// Text
+@mixin truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// Screen readers only
+// @include sr-only;
+@mixin sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// Focus only for keyboard navigation
+// @include focus-visible($color-outline-focus);
+@mixin focus-visible($color: $color-outline-focus, $offset: 2px) {
+  &:focus-visible {
+    outline: 2px solid $color;
+    outline-offset: $offset;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+// Containers
+// @include container(960px);
+@mixin container($max-width: 1440px) {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 49px;
+  padding-right: 49px;
+}
+
+// Z-index Layering
+// @include z(modal);
+$z-index: (
+  'dropdown': 1000,
+  'sticky': 1020,
+  'modal': 1050,
+  'overlay': 1080
+);
+
+@mixin z($key) {
+  @if map-has-key($z-index, $key) {
+    z-index: map-get($z-index, $key);
+  } @else {
+    @warn "No z-index found for `#{$key}` in \$z-index map.";
+  }
+}
+
+// Aspect ratio
+// @include aspect-ratio(16, 9);
+@mixin aspect-ratio($width, $height, $use-fallback: true) {
+  @if $use-fallback {
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      padding-top: calc(#{$height} / #{$width} * 100%);
+    }
+
+    > * {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  } @else {
+    aspect-ratio: #{$width} / #{$height};
+  }
+}

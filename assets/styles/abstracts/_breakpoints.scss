@@ -1,0 +1,23 @@
+// Breakpoints
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1440px
+);
+
+// Mixin for min-width 
+//@include query-min(md) {}
+@mixin query-min($size) {
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+// Mixin for max-width
+// @include query-max(sm) {}
+@mixin query-max($size) {
+  @media (max-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
