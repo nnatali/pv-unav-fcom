@@ -1,8 +1,219 @@
 @use '../abstracts' as *;
 
 .header {
+  overflow: hidden;
+  background: linear-gradient(132deg, #E293B8 0%, #E02817 73.53%);
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #E02817 37.39%, #A78EC1 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0;
+    animation: opacity 1.5s 1s forwards;
+  }
+  
+  .u-container {
+    max-width: 1440px;
+    padding: 128px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    min-height: 960px;
+    height: 100vh;
+    // min-height: 100vh;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    @include query-min(sm) {
+      
+    }
+  }
+
+  &__logo {
+    max-width: 149px;
+    margin-left: auto;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+
+    @include query-min(sm) {
+      max-width: 249px;
+      right: 40px;
+    }
+  }
   
   &__title {
-    @include sr-only;
+    color: $color-text-contrast;
+    font-family: $font-family-base;
+    font-size: 21.933px;
+    line-height: 1;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    text-transform: uppercase;
+    width: calc(100vw - 80px);
+    max-width: 679px;
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    animation: title 1.5s 1.5s forwards;
+
+    @include query-min(lg) {
+      left: 80px;  
+      animation-name: titleD;
+    }
+
+    span {
+      display: block;
+      opacity: 1;
+      animation: opacity-0 1.5s 1.5s forwards;
+    }
+
+    img {
+      display: block;
+    }
+  }
+
+  &__vector {
+    width: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    position: absolute;
+    left: calc(100vw - 225px);
+    bottom: 0%;
+    animation: vector 1.5s 1.5s forwards;
+
+    @include query-min(lg) {
+      width: 823px;
+      min-width: 823px;
+      max-width: 823px;
+      left: calc(100vw - 618px);
+      animation-name: vectorD;
+      
+    }
+  }
+
+  &__intro {
+    max-width: 580px;
+    width: calc(100vw - 40px);
+    // min-width: calc(100vw - 40px);
+    position: absolute;
+    opacity: 0;
+    left: calc(100% + 100px);
+    top: 50%;
+    transform: translateY(-50%);
+    animation: intro 1.5s 2s forwards;
+
+    @include query-min(lg) {
+      animation-name: introD;
+    }
+  }
+
+  &__subtitle {
+    color: $color-text-contrast;
+    font-family: $font-family-secondary;
+    font-size: 38px;
+    line-height: 0.95;
+    font-style: italic;
+    font-weight: 300;
+    text-align: left;
+    text-wrap: balance;
+    margin-bottom: 20px;
+
+    @include query-min(lg) {
+      font-size: 64px;
+    }
+  }
+
+  &__text {
+    max-width: 524px;
+    color: $color-text-contrast;
+    font-family: $font-family-base;
+    font-size: 16px;
+    line-height: 1.3;
+    font-style: normal;
+    font-weight: 500;
+    text-align: left;
+
+    @include query-min(lg) {
+      font-size: 18px;
+    }
+
+    strong {
+      font-weight: 800;
+    }
+  }
+}
+
+@keyframes opacity {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity-0 {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes title {
+  100% {
+    max-width: 147px;
+    top: calc(0% + 12px);
+    left: 20px;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes titleD {
+  100% {
+    max-width: 147px;
+    top: calc(0% + 18px);
+    left: 40px;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes vector {
+  100% {
+    width: 100vw;
+    max-width: 100vw;
+    // left: 0;
+    // bottom: -75vw;
+    left: -90vw;
+    bottom: 0;
+  }
+}
+
+@keyframes vectorD {
+  100% {
+    width: 1945px;
+    max-width: 1945px;
+    left: -1154px;
+    bottom: calc(50% - 972px);
+  }
+}
+
+@keyframes intro {
+  100% {
+    opacity: 1;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+@keyframes introD {
+  100% {
+    opacity: 1;
+    left: calc(100% - 600px);
   }
 }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="409px" height="326px" viewBox="0 0 409 326" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>1</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1" fill="#D9D9D9" fill-rule="nonzero">
+            <polygon id="Path" points="245.3687 81.553 163.579163 163.106 163.57991 0"></polygon>
+            <polygon id="Path" points="81.7895 81.554 163.57991 0 163.579163 163.106"></polygon>
+            <polygon id="Path" points="81.7895 81.554 0 163.106 0.001 0"></polygon>
+            <polygon id="Path" points="327.211 163.107 245.4211 81.554 408.999 81.554"></polygon>
+            <polygon id="Path" points="327.211 81.554 245.4217 0 409 0.001"></polygon>
+            <polygon id="Path" points="408.625 244.446 326.835 326 326.836 162.894"></polygon>
+            <polygon id="Path" points="326.836 244.446 245.0462 326 245.0469 162.894"></polygon>
+            <polygon id="Path" points="164.04289 325.787 82.2534 244.233 245.8317 244.234"></polygon>
+            <polygon id="Path" points="164.04289 244.233 82.2534 162.68 245.8317 162.68"></polygon>
+            <polygon id="Path" points="82.254 162.893 0.571 162.893 82.254 244.34"></polygon>
+            <polygon id="Path" points="82.254 244.34 0.571 244.34 82.254 325.786"></polygon>
+        </g>
+    </g>
+</svg>

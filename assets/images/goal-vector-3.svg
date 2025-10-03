@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="439px" height="439px" viewBox="0 0 439 439" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Path</title>
+    <defs>
+        <linearGradient x1="49.9997722%" y1="0%" x2="49.9997722%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#A78EC1" offset="0%"></stop>
+            <stop stop-color="#CF0000" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Path" fill="url(#linearGradient-1)" fill-rule="nonzero" points="439 0 219.5 0 0 219.5 219.5 439 439 439 219.5 219.5"></polygon>
+    </g>
+</svg>

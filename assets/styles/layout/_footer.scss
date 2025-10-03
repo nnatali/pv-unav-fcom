@@ -1,5 +1,189 @@
 @use '../abstracts' as *;
 
 .footer {
+  background-color: $color-bg-contrast;
+
+  .u-container {
+    max-width: 1368px;
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
   
+  &__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-bottom: 52px;
+    border-bottom: 1px solid $color-grey;
+
+    @include query-min(lg) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 36px;
+
+    @include query-min(lg) {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  &__logo {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 30px;
+
+    @include query-min(lg) {
+      margin-bottom: 0;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    @include query-min(lg) {
+      gap: 24px;
+    }
+  }
+
+  &__icon {
+    display: block;
+    min-width: 32px;
+    height: 32px;
+    text-indent: -9999px;
+    overflow: hidden;
+    border-radius: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 1;
+    transition: all 0.5s;
+
+    &:hover {
+      opacity: 0.75;
+    }
+
+    &--in {
+      background-image: url('../images/ico-in.svg');
+    }
+
+    &--ins {
+      background-image: url('../images/ico-ins.svg');
+    }
+
+    &--x {
+      background-image: url('../images/ico-x.svg');
+    }
+
+    &--tk {
+      background-image: url('../images/ico-tk.svg');
+    }
+
+    &--yt {
+      background-image: url('../images/ico-yt.svg');
+    }
+
+    &--fb {
+      background-image: url('../images/ico-fb.svg');
+    }
+
+    &--fl {
+      background-image: url('../images/ico-fl.svg');
+    }
+  }
+
+  &__pages {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+
+    @include query-min(lg) {
+      align-items: center;
+      flex-direction: row;
+      gap: 40px;
+      margin-bottom: 0;
+    }
+
+    &-link {
+      color: $color-grey;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 1.2;
+      text-decoration: none;
+      opacity: 1;
+      transition: all 0.5s;
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    &-item {
+      color: $color-grey;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 1.2;
+      text-decoration: none;
+      min-width: 120px;
+
+      span {
+        display: block;
+      }
+
+      a {
+        color: $color-grey;
+        text-decoration: none;
+        opacity: 1;
+        transition: all 0.5s;
+
+        &:hover {
+          opacity: 0.75;
+        }
+      }
+    }
+  }
+
+  &__text {
+    width: 100%;
+    color: $color-grey;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.2;
+    text-decoration: none;
+    margin-top: 26px;
+  }
 }

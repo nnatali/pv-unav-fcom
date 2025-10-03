@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="150px" height="150px" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <defs>
+        <path d="M82,176.023 L82,108 L140.5,108 L140.5,117.523 C140.5,149.832 114.309,176.023 82,176.023 Z" id="path-1"></path>
+        <path d="M199,176.023 L199,108 L140.5,108 L140.5,117.523 C140.5,149.832 166.691,176.023 199,176.023 Z" id="path-3"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(-65, -65)">
+            <path d="M82,176.023 L82,108 L140.5,108 L140.5,117.523 C140.5,149.832 114.309,176.023 82,176.023 Z" id="Path" fill="#D36861" fill-rule="nonzero"></path>
+            <g id="Clipped">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Path"></g>
+                <path d="M110.23,140.311 C96.965,142.692 84.3807,166.5 81.9999,176.023 L74.5173,167.52 L74.5173,108.68 C90.3894,113.442 125.162,137.631 110.23,140.311 Z" id="Path" fill="#FF958E" fill-rule="nonzero" mask="url(#mask-2)"></path>
+            </g>
+            <path d="M199,176.023 L199,108 L140.5,108 L140.5,117.523 C140.5,149.832 166.691,176.023 199,176.023 Z" id="Path" fill="#D36861" fill-rule="nonzero"></path>
+            <g id="Clipped">
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <g id="Path"></g>
+                <path d="M170.77,140.311 C184.035,142.692 196.619,166.5 199,176.023 L206.483,167.52 L206.483,108.68 C190.611,113.442 155.838,137.631 170.77,140.311 Z" id="Path" fill="#FF958E" fill-rule="nonzero" mask="url(#mask-4)"></path>
+            </g>
+            <rect id="Rectangle" fill="#FFBAB6" fill-rule="nonzero" x="65" y="65" width="150" height="150" rx="75"></rect>
+            <rect id="Rectangle" fill="#000000" fill-rule="nonzero" x="90" y="135" width="30" height="30" rx="15"></rect>
+            <path d="M91,126.5 C100.5,126.5 108,118 108,110" id="Path" stroke="#000000" stroke-width="11" stroke-linecap="round"></path>
+            <rect id="Rectangle" fill="#000000" fill-rule="nonzero" transform="translate(174, 150) scale(-1, 1) translate(-174, -150)" x="159" y="135" width="30" height="30" rx="15"></rect>
+            <path d="M188,126.5 C178.5,126.5 171,118 171,110" id="Path" stroke="#000000" stroke-width="11" stroke-linecap="round"></path>
+            <circle id="Oval" fill="#FF958E" fill-rule="nonzero" cx="140" cy="140" r="75"></circle>
+            <path d="M167.5,144.33 C170.833,142.406 170.833,137.594 167.5,135.67 L130,114.019 C126.667,112.095 122.5,114.5 122.5,118.349 L122.5,161.651 C122.5,165.5 126.667,167.905 130,165.981 L167.5,144.33 Z" id="Path" fill="#9D4937" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

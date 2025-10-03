@@ -1,17 +1,275 @@
 @use '../abstracts' as *;
 
 .doc {
-
+  background-color: $color-grey-light;
+  
   .u-container {
-    padding-top: 72px;
-    padding-bottom: 72px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    min-height: 100vh;
 
     @include query-min(lg) {
-    
-    }
-
-    @include query-min(xl) {
-    
+      padding-top: 108px;
     }
   }
+
+  &__title {
+    margin-bottom: 14px;
+    color: $color-text-base;
+    font-family: $font-family-secondary;
+    font-size: 28px;
+    line-height: 1;
+    font-style: normal;
+    font-weight: 300;
+    text-transform: uppercase;
+
+    @include query-min(lg) {
+      font-size: 48px;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    em {
+      font-size: 20px;
+      line-height: 1;
+      font-style: italic;
+      font-weight: 400;
+      text-transform: none;
+
+      @include query-min(lg) {
+        font-size: 32px;
+      }
+    }
+
+    strong {
+      display: block;
+      color: $color-text-base;
+      font-family: $font-family-tertiary;
+      font-size: 40px;
+      line-height: 0.95;
+      letter-spacing: 0.3px;
+      font-style: normal;
+      font-weight: 800;
+
+      @include query-min(lg) {
+        font-size: 72px;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+
+  &__kicker {
+    color: $color-text-base;
+    font-size: 24px;
+    line-height: 1;
+    font-style: normal;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 33px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 50px;
+    
+    @include query-min(lg) {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    max-height: 157px;
+    // max-width: 240px;
+    padding: 50px 14px 30px;
+    overflow: hidden;
+    transition: all 0.75s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    
+    @include query-min(lg) {
+      height: 501px;
+      max-height: 501px;
+      flex: 1;
+      max-width: 240px;
+    }
+
+    &--1 {
+      background-color: $color-purple;
+    }
+
+    &--2 {
+      background-color: $color-orange;
+    }
+
+    &--3 {
+      background-color: $color-green;
+    }
+
+    &--4 {
+      background-color: $color-pink;
+    }
+
+    &.active {
+      max-height: 501px;
+      padding: 50px 32px 30px;
+
+      @include query-min(lg) {
+        height: 501px;
+        max-width: 505px;
+      }
+    }
+    
+    &--1.active .doc__vector {
+      min-width: 358px;
+      max-width: 358px;
+      right: -214px;
+    }
+  
+    &--2.active .doc__vector {
+      min-width: 349px;
+      max-width: 349px;
+      right: -174px;
+    }
+  
+    &--3.active .doc__vector {
+      min-width: 411px;
+      max-width: 411px;
+      right: -248px;
+    }
+  
+    &--4.active .doc__vector {
+      min-width: 410px;
+      max-width: 410px;
+      right: -203px;
+    }
+  }
+
+  &__vector {
+    filter: none;
+    position: absolute;
+    transition: all 1s;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+
+    .doc__item--1 & {
+      min-width: 409px;
+      right: -6px;
+    }
+
+    .doc__item--2 & {
+      min-width: 349px;
+      right: 5px;
+    }
+
+    .doc__item--3 & {
+      min-width: 411px;
+      right: -171px;
+    }
+
+    .doc__item--4 & {
+      min-width: 438px;
+      right: -90px;
+    }
+  }
+
+  &__subtitle {
+    color: $color-text-base;
+    font-family: $font-family-tertiary;
+    font-size: 38px;
+    line-height: 1;
+    font-style: normal;
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+    text-wrap: balance;
+    width: 100%;
+    max-width: 289px;
+    margin-bottom: 16px;
+    transform: scale(0.75);
+    transform-origin: left top;
+    transition: all 0.75s 0.25s;
+    position: relative;
+    z-index: 2;
+
+    @include query-min(lg) {
+      font-size: 48px;
+    }
+
+    .active & {
+      transform: scale(1);  
+      line-height: 0.91;
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  &__description {
+    color: $color-text-base;
+    font-size: 18px;
+    line-height: 1.2;
+    font-style: normal;
+    font-weight: 500;
+    text-align: left;
+    width: 100%;
+    min-width: 289px;
+    max-width: 289px;
+    margin-bottom: 42px;
+    transition: all 0.75s 0.25s;
+    opacity: 0;
+    transform: translateX(110%);
+    position: relative;
+    z-index: 2;
+
+    @include query-min(lg) {
+      font-size: 20px;
+    }
+
+    .active & {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+
+  &__text {
+    color: $color-text-base;
+    font-size: 16px;
+    line-height: 1.2;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    width: 100%;
+    min-width: 308px;
+    max-width: 308px;
+    margin-top: auto;
+    transition: all 0.75s 0.25s;
+    opacity: 0;
+    transform: translateX(110%);
+    position: relative;
+    z-index: 2;
+
+    .active & {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+
+  &__options {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+
 }

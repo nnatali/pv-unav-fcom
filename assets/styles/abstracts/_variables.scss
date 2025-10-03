@@ -2,15 +2,24 @@
 @use 'breakpoints' as *;
 
 // Colors
-$color-text-base: #000;
-$color-text-base-contrast: #fff;
+$color-text-base: #2F2F2F;
+$color-text-contrast: #fff;
 $color-bg-base: #fff;
-$color-bg-base-contrast: #000;
-$color-accent: #E4032E;
+$color-bg-contrast: #2F2F2F;
+$color-accent: #CF0000;
 $color-outline-focus: #005fcc;
+$color-grey: #D9D9D9;
+$color-grey-light: #F6F6F6;
+$color-purple: #A78EC1;
+$color-orange: #F8B37F;
+$color-green: #02AE95;
+$color-pink: #E293B8;
+
 
 // Typography
-$font-family-base: 'AA';
+$font-family-base: 'Roboto';
+$font-family-secondary: 'RST Thermal';
+$font-family-tertiary: 'Owners Narrow';
 $font-size-base: 1rem;
 $line-height-base: 1.5;
 

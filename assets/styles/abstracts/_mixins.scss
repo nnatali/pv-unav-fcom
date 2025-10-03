@@ -34,12 +34,13 @@
 
 // Containers
 // @include container(960px);
-@mixin container($max-width: 1440px) {
+@mixin container($max-width: 1319px) {
   width: 100%;
+  max-width: $max-width;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 49px;
-  padding-right: 49px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 // Z-index Layering

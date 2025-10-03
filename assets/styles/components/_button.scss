@@ -1,5 +1,145 @@
 @use '../abstracts' as *;
 
 .button {
-  color: $color-accent;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0;
+  border: 1px solid;
+
+  strong {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px 8px 16px;
+    color: $color-grey-light;
+    font-size: 16px;
+    line-height: 1.2;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  span {
+    width: 42px;
+    min-width: 42px;
+    height: 42px;
+    background-color: $color-grey-light;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: left;
+    text-indent: -9999px;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 14px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &--primary {
+    border-color: $color-bg-contrast;
+
+    strong {
+      background-color: $color-bg-contrast;
+    }
+
+    span {
+
+      &:before {
+        background-image: url('../images/ico-go.svg');
+        top: 14px;
+        left: -150%;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        width: 16px;
+        height: 14px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        background-image: url('../images/ico-go.svg');
+        top: 14px;
+      }
+    }
+
+    &:hover span:before {
+      animation: buttonP 0.8s infinite;
+    }
+
+    &:hover span:after {
+      animation: buttonP 0.8s 0.4s infinite;
+    }
+  }
+
+  &--secondary {
+    border-color: $color-accent;
+
+    strong {
+      background-color: $color-accent;
+    }
+
+    span {
+
+      &:before {
+        background-image: url('../images/ico-download.svg');
+        top: 14px;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 16px;
+        height: 2px;
+        background-color: $color-accent;
+        bottom: 12px;
+      }
+    }
+
+    &:hover span:before {
+      animation: button 0.75s infinite;
+    }
+  }
+}
+
+@keyframes button {
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: 14px;
+  }
+}
+
+@keyframes buttonP {
+  0% {
+    left: 50%;
+  }
+  50.9% {
+    left: 120%;
+  }
+  51% {
+    left: -120%;
+  }
+  100% {
+    left: 50%;
+  }
 }
